@@ -6,20 +6,14 @@ using System.Threading.Tasks;
 
 namespace BankAccountProject
 {
-    class Account
+    abstract class Account
     {
-        //Setting the Field
 
-        protected int accountNumber;
-        protected double balance;
-        protected double checking;
-        protected double currentBalance;
-        protected double deposit;
-        protected int withdraw;
-        //Properties
 
-        
+        public abstract void GetBalance();
 
+        public abstract void Deposit();
+        public abstract void Withdraw();
 
 
 

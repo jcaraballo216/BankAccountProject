@@ -13,16 +13,13 @@ namespace BankAccountProject
             int numChoice;//declaring the variable for menu
 
             //Greeting message
+
             Client name1 = new Client("Tiger Woods", "Cleveland", 01234);
             name1.Info();
             Console.WriteLine("Welcome to PGA Bank!\n");
             Console.WriteLine("Please pick from the following menu!\n");
             //setting the menu
-            //1.View Client Information
-            //2.View Account Balance
-            //3.Deposit Funds
-            // 4.Withdraw Funds
-            // 5.Exit
+
             Console.WriteLine(" 1. View Client Information\n 2. View Account Balance\n 3. Deposit Funds\n 4. Withdraw Funds\n 5. Exit");
             numChoice = int.Parse(Console.ReadLine());
 
