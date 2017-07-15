@@ -11,7 +11,7 @@ namespace BankAccountProject
         static void Main(string[] args)
         {
             int numChoice;//declaring the variable for menu
-
+            char letter;
             //Greeting message
 
             Client name1 = new Client("Tiger Woods", "Cleveland", 01234);
@@ -29,10 +29,17 @@ namespace BankAccountProject
                 Client name2 = new Client("Tiger Woods", "Cleveland", 01234);
                 name1.Info2();
             }
-            else if (numChoice == 2)
+            if (numChoice == 2)
             {
-
+                Console.WriteLine("a. Checking Account\nb. Savings Account");
+                
             }
+            
+            
+            
+
+            
+                
 
 
         }

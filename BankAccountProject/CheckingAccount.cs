@@ -12,8 +12,8 @@ namespace BankAccountProject
         protected double balance = 2000.00d;
         protected string accountType = "Checking";
 
-        private double deposit;
-        private double withdrawl;
+        private int deposit;
+        private int withdrawl;
 
         public CheckingAccount()
         {
@@ -22,17 +22,19 @@ namespace BankAccountProject
 
         public override void GetBalance()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Your current balance is: " + balance);
         }
 
         public override void Deposit()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("How much would you like to deposit? " + deposit);
+            deposit = int.Parse(Console.ReadLine());
         }
 
         public override void Withdraw()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("How much would you like to withdrawl? " + withdrawl);
+            withdrawl = int.Parse(Console.ReadLine());
         }
     }
 }
