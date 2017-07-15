@@ -9,11 +9,8 @@ namespace BankAccountProject
     abstract class Account
     {
 
-
-        public abstract void GetBalance();
-
-        public abstract void Deposit();
-        public abstract void Withdraw();
+        public abstract int Deposit(int deposit);
+        public abstract int Withdraw(int withdraw);
 
 
 

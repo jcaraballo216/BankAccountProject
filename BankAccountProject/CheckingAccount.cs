@@ -8,33 +8,31 @@ namespace BankAccountProject
 {
     class CheckingAccount : Account
     {
-        protected int accountNumber = 01234;
-        protected double balance = 2000.00d;
-        protected string accountType = "Checking";
-
-        private int deposit;
-        private int withdrawl;
+       
+        protected int balance = 2000;     
+       
 
         public CheckingAccount()
         {
 
         }
 
-        public override void GetBalance()
+        public int Balance
         {
-            Console.WriteLine("Your current balance is: " + balance);
+            get { return this.balance; }
+            set { this.balance = value; }
         }
 
-        public override void Deposit()
+        public override int Deposit(int deposit)
         {
-            Console.WriteLine("How much would you like to deposit? " + deposit);
-            deposit = int.Parse(Console.ReadLine());
+            return deposit += Balance;
         }
 
-        public override void Withdraw()
+        public override int Withdraw(int withdraw)
         {
-            Console.WriteLine("How much would you like to withdrawl? " + withdrawl);
-            withdrawl = int.Parse(Console.ReadLine());
+            return balance -= withdraw;
         }
+
+       
     }
 }
