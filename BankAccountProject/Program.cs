@@ -97,14 +97,14 @@ namespace BankAccountProject
                             {
                                 Console.WriteLine("How much would you like to withdraw?");
                                 withdraw = int.Parse(Console.ReadLine());
-                                tigerChecking.Withdraw(withdraw);
+                                tigerChecking.Balance = tigerChecking.Withdraw(withdraw);
                                 tigerChecking.GetBalance();
                             }
                             if (numChoice2 == "2")
                             {
                                 Console.WriteLine("How much would you like to withdraw?");
                                 withdraw = int.Parse(Console.ReadLine());
-                                tigerSavings.Withdraw(withdraw);
+                                tigerSavings.Balance = tigerSavings.Withdraw(withdraw);
                                 tigerSavings.GetBalance();
                             }
                         } while (numChoice != "4");
