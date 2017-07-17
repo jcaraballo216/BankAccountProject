@@ -76,14 +76,14 @@ namespace BankAccountProject
                         {
                             Console.WriteLine("How much would you like to deposit?");
                             deposit = int.Parse(Console.ReadLine());
-                            tigerChecking.Deposit(deposit);
+                            tigerChecking.Balance = tigerChecking.Deposit(deposit);
                             tigerChecking.GetBalance();
                         }
                         if (numChoice2 == "2")
                         {
                             Console.WriteLine("How much would you like to deposit?");
                             deposit = int.Parse(Console.ReadLine());
-                            tigerSavings.Deposit(deposit);
+                            tigerSavings.Balance = tigerSavings.Deposit(deposit);
                             tigerSavings.GetBalance();
                         }
                     } while (numChoice != "3");
