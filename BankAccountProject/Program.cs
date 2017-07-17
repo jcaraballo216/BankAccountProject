@@ -71,7 +71,7 @@ namespace BankAccountProject
                         Console.WriteLine("1. Checking Account\n2. Savings Account");
                         numChoice2 = Console.ReadLine();
 
-                        //I was not able to get the deposit and balance to add.
+                        //I was not able to get the deposit / withdraw and balance to add.
                         if (numChoice2 == "1")
                         {
                             Console.WriteLine("How much would you like to deposit?");
@@ -89,13 +89,29 @@ namespace BankAccountProject
                     } while (numChoice != "3");
                     if (numChoice == "4")
                     {
-                        Console.WriteLine("")
+                        do
+                        {
+                            Console.WriteLine("1. Checking Account\n2. Savings Account");
+                            numChoice2 = Console.ReadLine();
+                            if (numChoice2 == "1")
+                            {
+                                Console.WriteLine("How much would you like to withdraw?");
+                                withdraw = int.Parse(Console.ReadLine());
+                                tigerChecking.Withdraw(withdraw);
+                                tigerChecking.GetBalance();
+                            }
+                            if (numChoice2 == "2")
+                            {
+                                Console.WriteLine("How much would you like to withdraw?");
+                                withdraw = int.Parse(Console.ReadLine());
+                                tigerSavings.Withdraw(withdraw);
+                                tigerSavings.GetBalance();
+                            }
+                        } while (numChoice != "4");
+
                     }
-            }
 
-
-
-
+                }
             } while (numChoice != "5");
         }
     }
