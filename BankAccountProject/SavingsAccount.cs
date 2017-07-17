@@ -8,19 +8,28 @@ namespace BankAccountProject
 {
     class SavingsAccount : Account
     {
+        //setting fields
         protected int balance = 2000;
-
-
-        public SavingsAccount()
-        {
-
-        }
+        private int deposit;
+        private int withdraw;
 
         public int Balance
         {
             get { return this.balance; }
             set { this.balance = value; }
         }
+
+        public SavingsAccount()
+        {
+
+        }
+
+        public SavingsAccount(int balance)
+        {
+            this.balance = balance;
+        }
+
+        //Method
 
         public override int Deposit(int deposit)
         {
@@ -29,7 +38,11 @@ namespace BankAccountProject
 
         public override int Withdraw(int withdraw)
         {
-            return withdraw -= Balance;
+            return balance -= withdraw;
+        }
+        public override void GetBalance()
+        {
+            Console.WriteLine(balance.ToString());
         }
 
     }

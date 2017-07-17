@@ -12,6 +12,11 @@ namespace BankAccountProject
         public abstract int Deposit(int deposit);
         public abstract int Withdraw(int withdraw);
 
+        public virtual void GetBalance()
+        {
+
+        }
+
 
 
 
